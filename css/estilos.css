@@ -9,6 +9,10 @@
     margin-top: 4%;
 }
 
+.tarjetas {
+    margin: auto;
+}
+
 /* jumbotron/encabezado */
 h1{
     text-align: center;
