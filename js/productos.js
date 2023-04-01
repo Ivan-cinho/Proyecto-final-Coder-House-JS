@@ -11,3 +11,7 @@ const triplesComunes = [ {id: 1, imagen: "🧀", nombre: "Jamon y queso", tipo: 
 ]
 
 const triplesEspeciales = []
+
+const triplesVegetarianos = []
+
+const triplesVeganos = []
