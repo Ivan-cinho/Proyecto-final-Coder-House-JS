@@ -1,13 +1,13 @@
-const triplesComunes = [ {id: 1, imagen: "🧀", nombre: "Jamon y queso", tipo: "Triples Comunes"},
-                    {id: 2, imagen: "🍅", nombre: "Jamon y Tomate", tipo: "Triples Comunes"},
-                    {id: 3, imagen: "🥬", nombre: "Jamon y Lechuga", tipo: "Triples Comunes"},
-                    {id: 4, imagen: "🥚", nombre: "Jamon y Huevo", tipo: "Triples Comunes"},
-                    {id: 5, imagen: "🧀", nombre: "Salame y queso", tipo: "Triples Comunes"},
-                    {id: 6, imagen: "🌽", nombre: "Choclo", tipo: "Triples Comunes"},
-                    {id: 7, imagen: "🍐", nombre: "Jamon y Aceitunas verdes", tipo: "Triples Comunes"},
-                    {id: 8, imagen: "🥪", nombre: "Primavera", tipo: "Triples Comunes"},
-                    {id: 9, imagen: "🌶", nombre: "Jamon y Morron", tipo: "Triples Comunes"},
-                    {id: 10, imagen: "🍆", nombre: "Jamon y Berenjena", tipo: "Triples Comunes"}
+const triplesComunes = [ {id: 1, imagen: "🧀", nombre: "Jamon y queso", tipo: "Triples Comunes", precio: 200},
+                    {id: 2, imagen: "🍅", nombre: "Jamon y Tomate", tipo: "Triples Comunes", precio: 200},
+                    {id: 3, imagen: "🥬", nombre: "Jamon y Lechuga", tipo: "Triples Comunes", precio: 200},
+                    {id: 4, imagen: "🥚", nombre: "Jamon y Huevo", tipo: "Triples Comunes", precio: 200},
+                    {id: 5, imagen: "🧀", nombre: "Salame y queso", tipo: "Triples Comunes", precio: 200},
+                    {id: 6, imagen: "🌽", nombre: "Choclo", tipo: "Triples Comunes", precio: 200},
+                    {id: 7, imagen: "🍐", nombre: "Jamon y Aceitunas verdes", tipo: "Triples Comunes", precio: 200},
+                    {id: 8, imagen: "🥪", nombre: "Primavera", tipo: "Triples Comunes", precio: 200},
+                    {id: 9, imagen: "🌶", nombre: "Jamon y Morron", tipo: "Triples Comunes", precio: 200},
+                    {id: 10, imagen: "🍆", nombre: "Jamon y Berenjena", tipo: "Triples Comunes", precio: 200}
 ]
 
 const triplesEspeciales = [ {id: 11, imagen: "", nombre: "Jamon y Palmitos", tipo: "Triples Especiales"},

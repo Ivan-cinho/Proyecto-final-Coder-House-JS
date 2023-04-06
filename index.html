@@ -19,11 +19,11 @@
 
 <body>
     <header id="header">
-        <!-- la navegacion va a incluir un sobre nosotros y alguna opcion mas a definir como herramienta de busqueda -->
-        <nav class="navbar bg-body-tertiary">
+        <!-- la navegacion va a incluir un sobre nosotros y alguna opcion mas a definir -->
+        <nav class="navbar">
             <form class="container-fluid justify-content-start">
-                <button class="btn btn-outline-success me-2" type="button">Main button</button>
-                <button class="btn btn-sm btn-outline-secondary" type="button">Smaller button</button>
+                <button class="btn btn-outline-success me-2" type="button">Boton sin funcion todavia</button>
+                <button class="btn btn-sm btn-outline-secondary" type="button">otro boton sin funcion</button>
             </form>
         </nav>
     </header>
@@ -34,12 +34,8 @@
             <H1>SAN-BAJON</H1>
             <h2>delivery de sanguchitos de miga 24 horas</h2>
         </section>
-        <!-- bara de busqueda de producto -->
-        <!-- <section class="container">
-            <input type="search" id="inputSearch" placeholder="">
-        </section> -->
-        <section class="container">
-            <select class="form-select sabores" aria-label="Default select example">
+        <section class="container-fluid selector">
+            <select class="form-select" aria-label="Default select example">
                 <!-- <option selected>Sabores</option> -->
                 <option value="1">Triples comunes</option>
                 <option value="2">Triples especiales</option>
@@ -48,14 +44,10 @@
             </select>
         </section>
         <!-- section para las cards -->
-        <section>
-            <div id="tarjetas">
+        <section class="container contenedor-tarjetas" id="tarjetas">
                 <!-- cards inyectados desde js -->
-            </div>
         </section>
-        <!-- section para los formularios -->
-        <!-- falta incluirle un titulo h3, h4 o placeholder para referenciar de que es el menu -->
-        <section class="container">
+        <section class="container boton-ver-pedido">
             <!-- boton de carrito -->
                 <button type="button" class="btn btn-primary">Ver pedido</button>
         </section>

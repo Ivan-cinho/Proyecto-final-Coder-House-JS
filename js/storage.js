@@ -11,8 +11,9 @@ const guardarPedido = ()=> {
 const recuperarPedido = ()=> {
     const pedidoGuardado = JSON.parse(localStorage.getItem("pedidoDeTriples"))
         if (pedidoGuardado !== null) {
-           pedidoGuardado.forEach(triple => {
-                pedido.push(triple)
-           }); 
+            pedido.push(...pedidoGuardado)
+            // pedidoGuardado.forEach(triple => {
+            //     pedido.push(triple)
+            // }); 
         }
 }

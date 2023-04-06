@@ -1,26 +1,14 @@
 
-// para referenciar al queryselector se hace con nombre de etiqueta p, #paraId, .paraclasecss
-const tarjetas = document.querySelector("div#tarjetas")
+const tarjetas = document.querySelector("section#tarjetas")
 const footer = document.querySelector("footer")
-const inputSearch = document.querySelector("input#inputSearch") // esta constante es para el search que habria que incluir en html si es que quiero usar esa herramienta para la app, ver minuto 1:49:00 de clase 9
 const selectorDeSabores = document.querySelector("select.form-select.sabores")
 const selectorDeEnvios = document.querySelector("select.form-select.envio")
 
-footer.innerHTML = "<p>Hola footer</p>"
+footer.innerHTML = "<p>Comisión 39470 - Alumno Pablo Iván Bárcena</p>"
 
-// searching de productos, ojo que asi como esta si se hace busqueda no permite agregar al carrito sepa uno x q
-// inputSearch.addEventListener("search", ()=> {
-//     let resultado = triplesComunes.filter((triple)=> triple.nombre.includes(inputSearch.value))
-//         console.table(resultado)
-//         if (resultado.length > 0) {
-//             cargarTriplesComunes(resultado)
-//         }
-// })
 
-  
 // funcion para mostrar las cards de los productos    
 function cargarTriples(arrayDeTriples) {
-    // debugger
     tarjetas.innerHTML = ""
     if (arrayDeTriples.length > 0) {
         arrayDeTriples.forEach((triple)=> {
@@ -32,17 +20,24 @@ function cargarTriples(arrayDeTriples) {
     }
 }
 
+// intento de funcion para darle funcionalidad a los botones de eliminar en cierre.html, aun incompleto
+// eliminar triple
+// function eliminarTriple(id) {
+//     let triple = pedido.findindex((triple)=> triple.id === id)
+//     if (triple > -1) {
+//         pedido.splice(triple, 1)
+//     }
+// }
+
 // funcion para detectar cuantos clicks y a que productos los hizo
-// asi lo hizo el profe pero me funciono igual agregandolo mas abajo
 const activarClickEnBotones = ()=> {
     const btnAgregar = document.querySelectorAll('a.btn.btn-primary')
     for (boton of btnAgregar) {
-        // la "e" como parametro de la funcion flecha hace referencia a objeto global event, tener en cuenta para rescatar datos de un evento
         boton.addEventListener("click", (e)=> {
             let triple = triplesComunes.find((triple)=> triple.id === parseInt(e.target.id))
             pedido.push(triple)
-            guardarPedido()
-            // console.table(pedido)
+            console.log("Se agrego el sanguchito de " + triple.nombre.toLowerCase() + " al pedido")
+            guardarPedido(pedido)
         })
         boton.addEventListener("mousemove", (e)=> {
             let codigoId = parseInt(e.target.title = `Agregar al pedido`)
@@ -50,13 +45,20 @@ const activarClickEnBotones = ()=> {
     }
 }
 
-// boton pedir! re dirije al html de cierre de pedido
-const clickBtn = document.querySelector("button.btn.btn-primary")
-    clickBtn.addEventListener("click", ()=> {location.href = "cierre.html"})
+// boton ver pedido, re dirije al html de cierre de pedido
+const clickVerPedido = document.querySelector("button.btn.btn-primary")
+    clickVerPedido.addEventListener("click", ()=> {location.href = "cierre.html"})
+
+
+// boton "seguir pidiendo", declarado como esta no funciona, por aguna razon no cargan las cards en index.html, queda comentado x ahora
+// const clickSeguirPidiendo = document.querySelector("button.btn.btn-primary.seguirPidiendo")
+//     debugger
+//     clickSeguirPidiendo.addEventListener("click", ()=> {location.href = "index.html"})
 
 
 cargarTriples(triplesComunes)
 recuperarPedido()
 
 
-// const btnAgregar = document.querySelectorAll('a.btn.btn-primary')
+
+
