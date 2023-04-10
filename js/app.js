@@ -1,8 +1,13 @@
 
 const tarjetas = document.querySelector("section#tarjetas")
 const footer = document.querySelector("footer")
-const selectorDeSabores = document.querySelector("select.form-select.sabores")
-const selectorDeEnvios = document.querySelector("select.form-select.envio")
+const selectorDeSabores = document.querySelector(".sabores")
+// const selectorDeEnvios = document.querySelector("select.form-select.envio")
+// botones de funcion principales
+const btnEliminar = document.querySelectorAll(".btnEliminar")
+const btnCancelar = document.querySelector(".cancelarPedido")
+const seguirPidiendo = document.querySelector("button.seguirPidiendo")
+const clickVerPedido = document.querySelector(".verPedido")
 
 footer.innerHTML = "<p>Comisión 39470 - Alumno Pablo Iván Bárcena</p>"
 
@@ -20,18 +25,10 @@ function cargarTriples(arrayDeTriples) {
     }
 }
 
-// intento de funcion para darle funcionalidad a los botones de eliminar en cierre.html, aun incompleto
-// eliminar triple
-// function eliminarTriple(id) {
-//     let triple = pedido.findindex((triple)=> triple.id === id)
-//     if (triple > -1) {
-//         pedido.splice(triple, 1)
-//     }
-// }
 
 // funcion para detectar cuantos clicks y a que productos los hizo
 const activarClickEnBotones = ()=> {
-    const btnAgregar = document.querySelectorAll('a.btn.btn-primary')
+    const btnAgregar = document.querySelectorAll('.btnAgregar')
     for (boton of btnAgregar) {
         boton.addEventListener("click", (e)=> {
             let triple = triplesComunes.find((triple)=> triple.id === parseInt(e.target.id))
@@ -39,25 +36,26 @@ const activarClickEnBotones = ()=> {
             console.log("Se agrego el sanguchito de " + triple.nombre.toLowerCase() + " al pedido")
             guardarPedido(pedido)
         })
-        boton.addEventListener("mousemove", (e)=> {
-            let codigoId = parseInt(e.target.title = `Agregar al pedido`)
-        })
+        // boton.addEventListener("mousemove", (e)=> {
+        //     let codigoId = parseInt(e.target.title = `Agregar al pedido`)
+        // })
     }
 }
 
-// boton ver pedido, re dirije al html de cierre de pedido
-const clickVerPedido = document.querySelector("button.btn.btn-primary")
-    clickVerPedido.addEventListener("click", ()=> {location.href = "cierre.html"})
+
+// btnCancelar.addEventListener("click", ()=> {
+//     pedido.splice(0, pedido.length)
+//     console.log(pedido)
+//     // recuperarPedido(pedido)
+// })
 
 
-// boton "seguir pidiendo", declarado como esta no funciona, por aguna razon no cargan las cards en index.html, queda comentado x ahora
-// const clickSeguirPidiendo = document.querySelector("button.btn.btn-primary.seguirPidiendo")
-//     debugger
-//     clickSeguirPidiendo.addEventListener("click", ()=> {location.href = "index.html"})
-
+clickVerPedido.addEventListener("click", ()=> {location.href = "cierre.html"})
+ 
 
 cargarTriples(triplesComunes)
 recuperarPedido()
+
 
 
 

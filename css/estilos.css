@@ -38,6 +38,7 @@ footer {
     bottom: 0;
     width: 100%;
     text-align: center;
+    /* display: none; */
 }
 
 /* index html */
@@ -73,7 +74,7 @@ footer {
 
 table {
     margin: auto;
-    width: 70%;
+    width: 80%;
 }
 
 th {
@@ -83,5 +84,6 @@ th {
 
 td {
     text-align: center;
+    padding: 1%;
 }
 

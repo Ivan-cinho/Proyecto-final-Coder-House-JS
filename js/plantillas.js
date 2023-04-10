@@ -5,7 +5,7 @@ const retornarProductos = (triple)=> {
                 <div class="card-body">
                     <h5 class="card-title">${triple.nombre}</h5>
                     <p class="card-text">${triple.tipo}</p>
-                    <a href="#" class="btn btn-primary" id="${triple.id}">+</a>
+                    <a href="#" class="btn btn-primary btnAgregar" id="${triple.id}">+</a>
                 </div>
             </div>`
 }
@@ -16,6 +16,6 @@ const retornarPedido = (triple)=> {
     return `<tr>
                 <td>${triple.nombre}</td>
                 <td>aca iria la cantidad de cada uno</td>
-                <td><button id="${triple.id}" class="btn btn-primary">X</button></td>
+                <td><button id="${triple.id}" class="btn btn-primary btnEliminar">X</button></td>
             </tr>`
 }
