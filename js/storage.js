@@ -1,5 +1,3 @@
-// manejar logica de carrito + storage en los 2 html
-
 const pedido = []
 
 const guardarPedido = ()=> {

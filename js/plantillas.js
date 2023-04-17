@@ -1,5 +1,5 @@
 
-const retornarProductos = (triple)=> {
+const retornarTriples = (triple)=> {
     return `<div class="card" style="width: 18rem;">                  
                     <div class="card-img-top">${triple.imagen}</div>
                 <div class="card-body">
