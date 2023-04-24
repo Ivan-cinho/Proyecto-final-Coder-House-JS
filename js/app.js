@@ -3,14 +3,9 @@
 const tarjetas = document.querySelector("section#tarjetas")
 const selectorDeSabores = document.querySelector(".sabores")
 const vistaPreviaPedido = document.querySelector(".vistaPreviaPedido")
-// const selectorDeEnvios = document.querySelector("select.form-select.envio")
-// botones de funcion principales
-const contenedoTarjetas = document.querySelector(".contenedor-tarjetas")
+const contenedorTarjetas = document.querySelector(".contenedor-tarjetas")
 const verPedido = document.querySelector(".verPedido")
-const btnEliminar = document.querySelectorAll(".btnEliminar")
-const btnCancelar = document.querySelector(".cancelarPedido")
-const seguirPidiendo = document.querySelector(".seguirPidiendo")
-const btnAgregar = document.querySelectorAll('.btnAgregar')
+// const btnAgregar = document.querySelectorAll('.btnAgregar')
 
 function actualizarPedido() {
     vistaPreviaPedido.textContent = "Tu pedido tiene " + pedido.length + " sanguchitos"
@@ -21,30 +16,30 @@ function actualizarPedido() {
 // cargar cards de triples
 const cargarTriples = (array)=> {
     array.forEach(triple => {
-        contenedoTarjetas.innerHTML += retornarTriples(triple)
+        contenedorTarjetas.innerHTML += retornarTriples(triple)
     });
-    clickEnBotones()
+    botonAgregar()
 }
 
 // identificar botones de productos
-const clickEnBotones = ()=> {
+const botonAgregar = ()=> {
     const btnAgregar = document.querySelectorAll('.btnAgregar')
         for (boton of btnAgregar) {
             boton.addEventListener("click", (e)=> {                
                 let resultado = triplesComunes.find(triple => triple.id === parseInt(e.target.id))
                     pedido.push(resultado)
                     guardarPedido()
+                    actualizarPedido()
                     console.log(pedido)
             })
         } 
 }
 
 verPedido.addEventListener("click", ()=> location.href = "cierre.html")
-// seguirPidiendo.addEventListener("click", ()=> location.href = "index.html")
 
 cargarTriples(triplesComunes)
 recuperarPedido()
-actualizarPedido()
+
 
 
 
