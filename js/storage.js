@@ -1,5 +1,5 @@
 const pedido = []
-// const pedido = recuperarPedido() || []
+
 
 const guardarPedido = ()=> {
     if (pedido.length > 0) {
@@ -14,6 +14,7 @@ const recuperarPedido = ()=> {
             pedido.push(...pedidoGuardado)
             // pedidoGuardado.forEach(triple => {
             //     pedido.push(triple)
-            // }); 
+            // });  ver esta funcion!!!
         }
 }
+

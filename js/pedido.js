@@ -1,8 +1,8 @@
 
 const tbody = document.querySelector("tbody")
 const btnEliminar = document.querySelectorAll(".btnEliminar")
-const btnCancelar = document.querySelector(".cancelarPedido")
 const seguirPidiendo = document.querySelector(".seguirPidiendo")
+const btnCancelar = document.querySelector(".cancelarPedido")
 
 
 
@@ -11,7 +11,11 @@ recuperarPedido()
 // dentro de esta funcion quiero sumar cada triple q tenga el mismo id asi se refleja solo una vez con la cantidad
 function cargarPedido() {
         tbody.innerHTML = ""
-        pedido.forEach(triple => { tbody.innerHTML += retornarPedido(triple) })
+        if (pedido.length > 0) {
+            pedido.forEach(triple => { tbody.innerHTML += retornarPedido(triple) })
+        }   else {
+            // aca iria mensaje de pedido vacio
+        }
         botonEliminar()
 }
 
@@ -27,9 +31,19 @@ const botonEliminar = ()=> {
                 })
             }
         }
-    }
+}
 
+
+const botonCancelar = ()=> {
+    debugger
+    btnCancelar.addEventListener("click", (e)=> {
+        pedido = []
+    })
+}
+    
 seguirPidiendo.addEventListener("click", ()=> location.href = "index.html")
-cargarPedido(pedido)
 
+cargarPedido()
+botonEliminar()
+botonCancelar()
 

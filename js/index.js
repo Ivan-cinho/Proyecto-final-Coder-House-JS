@@ -5,13 +5,22 @@ const selectorDeSabores = document.querySelector(".sabores")
 const vistaPreviaPedido = document.querySelector(".vistaPreviaPedido")
 const contenedorTarjetas = document.querySelector(".contenedor-tarjetas")
 const verPedido = document.querySelector(".verPedido")
-// const btnAgregar = document.querySelectorAll('.btnAgregar')
+const triples = []
+const URL = "js/triples.json"
+
+const obtenerTriples = ()=> {
+    fetch(URL)
+        .then((response)=> response.json())
+        .then((data)=> triples.push(...data))
+        .then(()=> cargarTriples(triples))
+        .catch(error => {
+            console.error(error)
+        })
+}
 
 function actualizarPedido() {
     vistaPreviaPedido.textContent = "Tu pedido tiene " + pedido.length + " sanguchitos"
 }
-
-
 
 // cargar cards de triples
 const cargarTriples = (array)=> {
@@ -21,12 +30,12 @@ const cargarTriples = (array)=> {
     botonAgregar()
 }
 
-// identificar botones de productos
+// boton agregar
 const botonAgregar = ()=> {
     const btnAgregar = document.querySelectorAll('.btnAgregar')
         for (boton of btnAgregar) {
             boton.addEventListener("click", (e)=> {                
-                let resultado = triplesComunes.find(triple => triple.id === parseInt(e.target.id))
+                let resultado = triples.find(triple => triple.id === parseInt(e.target.id))
                     pedido.push(resultado)
                     guardarPedido()
                     actualizarPedido()
@@ -35,9 +44,9 @@ const botonAgregar = ()=> {
         } 
 }
 
-verPedido.addEventListener("click", ()=> location.href = "cierre.html")
+verPedido.addEventListener("click", ()=> location.href = "pedido.html")
 
-cargarTriples(triplesComunes)
+obtenerTriples()
 recuperarPedido()
 
 
