@@ -7,50 +7,42 @@
     <!-- BOOTSTRAP -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <!-- sweet alert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <!-- css -->
     <link rel="stylesheet" href="css/estilos.css">
+    <!-- favicom  -->
+    <link rel="icon" href="imagenes/pngwing.com.ico">
     <!-- js -->
-    <script src="js/productos.js"></script>
     <script src="js/plantillas.js"></script>
     <script src="js/storage.js"></script>
     <script defer src="js/index.js"></script>
-    <title>PROYECTO FINAL - BARCENA</title>
+    <title>PROYECTO FINAL - Comisión 39470 - Alumno Pablo Iván Bárcena</title>
 </head>
 
 <body>
     <header id="header">
-        <!-- la navegacion va a incluir un sobre nosotros y alguna opcion mas a definir -->
-        <nav class="navbar">
-            <form class="container-fluid justify-content-start">
-                <button class="btn btn-outline-success me-2" type="button">Boton sin funcion todavia</button>
-                <button class="btn btn-sm btn-outline-secondary" type="button">otro boton sin funcion</button>
-            </form>
-        </nav>
+        <p>🥪 sanguchitos 😎</p>
     </header>
     <main>
-        <!-- en el main incluimos el h1 principal e imagen tipo jumbotron (esto seria mejor ubicarlo en header), las cards de los productos y formularios para envio y formas de pago -->
-        <!-- section para el jumbotron/presentacion (esto seria mejor ubicarlo en header) -->
         <section class="container">
-            <H1>SAN-BAJON</H1>
+            <H1>SANBAJON</H1>
+            <img class="logo" src="imagenes/pngwing.com.png" alt="logo">
             <h2>delivery de sanguchitos de miga 24 horas</h2>
         </section>
-        <section class="container-fluid selector">
-            <select class="form-select sabores" aria-label="Default select example">
-                <!-- <option selected>Sabores</option> -->
-                <option value="1">Triples comunes</option>
-                <option value="2">Triples especiales</option>
-                <option value="3">Triples vegetarianos</option>
-                <option value="4">Triples veganos</option>
-            </select>
+        <section class="container">
+            <!-- <select class="form-select sabores" aria-label="Default select example">
+                <option value="comunes">Comunes</option>
+                <option value="especiales">Especiales</option>
+                <option value="vegetarianos">Vegetarianos</option>
+            </select> -->
             <p class="container vistaPreviaPedido">No tenes un pedido</p>
+            <!-- boton de carrito -->
+            <button type="button" class="btn  verPedido">Ver pedido</button>
         </section>
         <!-- section para las cards -->
         <section class="container contenedor-tarjetas" id="tarjetas">
                 <!-- cards inyectados desde js -->
-        </section>
-        <section class="container boton-ver-pedido">
-            <!-- boton de carrito -->
-                <button type="button" class="btn btn-primary verPedido">Ver pedido</button>
         </section>
     </main>
     <footer>

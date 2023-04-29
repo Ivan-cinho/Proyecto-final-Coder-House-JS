@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 
 *{
     margin: 0;
@@ -9,14 +10,10 @@ header {
     background-color: rgb(253, 215, 222);
 }
 
-body {
-    position: relative;
-    padding-bottom: 6%;
-    min-height: 100vh;
-}
-
-.container{
-    margin-top: 4%;
+.logo {
+    width: 15%;
+    display: block;
+    margin: auto;
 }
 
 h1{
@@ -25,6 +22,13 @@ h1{
 
 h2{
     text-align: center;
+    font-family: 'Pacifico', cursive;
+}
+
+body {
+    position: relative;
+    padding-bottom: 6%;
+    min-height: 100vh;
 }
 
 p {
@@ -33,39 +37,79 @@ p {
 
 /* footer */
 footer {
-    background-color: rgb(253, 215, 222);
+    background-color: #fcd6dd;
     position: absolute;
     bottom: 0;
     width: 100%;
     text-align: center;
-    /* display: none; */
 }
 
-/* index html */
+/* index.html */
 
-.form-select {
-    margin: 5% auto !important;
-    width: 60%;
+.vistaPreviaPedido {
+    margin-top: 4%;
+    text-align: center;
+    font-weight: 800;
+    font-size: 1.5rem;
+    background-color: #fcd6dd;
+    width: 30%;
 }
 
+.verPedido {
+    display: block;
+    margin: auto;
+    color: black;
+    background-color: #fffed5;
+    font-weight: 600;
+    font-size: medium;
+    transition: .3s;
+}
+
+.verPedido:hover {
+    background-color: #faf9b4;
+    font-weight: 700;
+    transition: .3s;
+}
+
+.contenedor-tarjetas {
+    max-width: 1024px;
+}
 .card {
+    /* background-color: #fcd6dd; */
     margin: 1%;
     display: inline-block;
+    border: none;
 }
 
-.form-select{
+.card p {
+    text-align: center;
+}
+
+.card-title {
+    text-align: center;
+    font-family: 'Pacifico', cursive;
+    background-color: #fcd6dd;
+    width: 80%;
     margin: auto;
-    margin-top: 3%;
-    width: 60% !important; 
 }
 
-.boton-ver-pedido {
-    display: flex;
-    justify-content: center;
+.btnAgregar {
+    font-weight: 600;
+    color: black;
+    background-color: #fffed5;
+    border: none;
+    display: table;
+    margin: auto;
+    border-radius: 50%;
 }
 
-/* cierre html */
+.btnAgregar:hover {
+    color: black;
+    background-color: #faf9b4; 
+    font-weight: 700;
+}
 
+/* pedido.html */
 .contenedor-pedido {
     margin: 5% auto;
     display: flex;
@@ -78,6 +122,7 @@ table {
 }
 
 th {
+    font-family: 'pacifico';
     text-align: center;
     background-color: rgb(253, 215, 222);
 }
@@ -87,3 +132,68 @@ td {
     padding: 1%;
 }
 
+.total {
+    margin-top: 4%;
+    text-align: center;
+    font-weight: 800;
+    font-size: 1.5rem;
+    background-color: #fcd6dd;
+    width: 35%;
+}
+
+.texto {
+    text-align: center;
+}
+
+.btnEliminar {
+    border: none;
+    background-color: white;
+}
+
+.btnEliminar img {
+    width: 65%;
+    transition: .3s;
+}
+.btnEliminar img:hover {
+    width: 67%;
+    transition: .3s;
+}
+
+.seguirPidiendo {
+    background-color: #fffed5;
+    border: none;
+    color: black;
+    font-weight: 600;
+}
+
+.seguirPidiendo:hover {
+    background-color: #faf9b4;
+    font-weight: 700;
+    color: black;
+}
+
+.confirmarPedido {
+    background-color: #fffed5;
+    border: none;
+    color: black; 
+    font-weight: 600;
+}
+
+.confirmarPedido:hover {
+    background-color: #faf9b4;
+    font-weight: 700;
+    color: black;
+}
+
+.cancelarPedido {
+    background-color: #fffed5;
+    border: none;
+    color: black;  
+    font-weight: 600;
+}
+
+.cancelarPedido:hover {
+    background-color: #faf9b4;
+    font-weight: 700;
+    color: black;
+}

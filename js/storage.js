@@ -8,13 +8,10 @@ const guardarPedido = ()=> {
 }
 
 const recuperarPedido = ()=> {
-    // return JSON.parse(localStorage.getItem("pedidoDeTriples"))
+    // return JSON.parse(localStorage.getItem("pedidoDeTriples")) no se ejecuta con este codigo
     const pedidoGuardado = JSON.parse(localStorage.getItem("pedidoDeTriples"))
         if (pedidoGuardado !== null) {
             pedido.push(...pedidoGuardado)
-            // pedidoGuardado.forEach(triple => {
-            //     pedido.push(triple)
-            // });  ver esta funcion!!!
         }
 }
 
